@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import React from "react";
+import { FaGithub } from "react-icons/fa";
 
 export default function Intro() {
   return (
@@ -56,6 +57,31 @@ export default function Intro() {
         sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
         laborum.
       </motion.p>
+      <motion.div
+        initial={{ y: -100, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{
+          type: "spring",
+          delay: 0.2,
+          duration: 0.7
+        }}
+        className="grid grid-flow-col
+      place-items-center gap-1
+      w-max mx-auto my-5">
+        <a href="https://github.com/JustMakingUpWords" target="_blank">
+          <FaGithub
+            className="size-9 
+          hover:outline hover:mx-1 outline-3 outline-offset-2 rounded-full 
+          duration-100 "></FaGithub>
+        </a>
+
+        <a href="https://github.com/JustMakingUpWords" target="_blank">
+          <FaGithub
+            className="size-9 
+          hover:outline hover:mx-1 outline-3 outline-offset-2 rounded-full 
+          duration-100 "></FaGithub>
+        </a>
+      </motion.div>
     </section>
   );
 }
