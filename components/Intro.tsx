@@ -7,10 +7,26 @@ export default function Intro() {
   return (
     <section className="mb-28 max-w-[50rem] text-center sm:mb-0 font-mono">
       <motion.div
-        initial={{ opacity: 0, scale: 0 }}
-        animate={{ opacity: 1, scale: 1 }}
+        initial={{ y: -100, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{
+          type: "spring",
+          duration: 0.5
+        }}
         className="flex items-center justify-center text-6xl mt-36">
-        Hello!👋
+        Hello!
+        <motion.div
+          initial={{ scale: 0.7 }}
+          animate={{ scale: 1 }}
+          transition={{
+            type: "spring",
+            delay: 0.1,
+            damping: 10,
+            duration: 0.5
+          }}
+          className="relative">
+          👋
+        </motion.div>
       </motion.div>
       <motion.div
         initial={{ y: -100, opacity: 0 }}
