@@ -7,6 +7,7 @@ import React from "react";
 import { FaGithubSquare } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { FaTwitterSquare } from "react-icons/fa";
+import { ImMail } from "react-icons/im";
 
 export default function Intro() {
   return (
@@ -18,7 +19,7 @@ export default function Intro() {
           type: "spring",
           duration: 0.5
         }}
-        className="flex items-center justify-center text-6xl mt-36">
+        className="flex items-center justify-center text-6xl mt-44">
         Hello!
         <motion.div
           initial={{ scale: 0.7 }}

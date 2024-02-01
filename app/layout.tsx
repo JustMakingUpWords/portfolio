@@ -15,12 +15,12 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  // bg-gradient-to-tl from-purple-900 via-blue-900 to-purple-950 animate-gradient
   return (
     <html lang="en">
       <body
         className={`${inter.className}
-        bg-gradient-to-tl from-purple-900 via-blue-900 to-purple-950
-        animate-gradient
+        bg-gradient-to-br from-zinc-900 to-zinc-800
         text-blue-50 relative h-[5000px]
         pt-28 sm:pt-36`}>
         <Header></Header>
