@@ -34,7 +34,8 @@ export default function Header() {
               className="h-3/4
             flex items-center justify-center">
               <Link
-                className="flex w-full items-center justify-center px-3 py-3 hover:text-zinc-500 transition"
+                className="flex w-full items-center justify-center px-3 py-3 
+              hover:scale-[1.2] transition"
                 href={link.hash}>
                 {link.name}
               </Link>

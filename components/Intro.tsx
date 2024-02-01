@@ -3,8 +3,10 @@
 import { motion } from "framer-motion";
 import React from "react";
 
-import { FaGithub } from "react-icons/fa";
+// icons
+import { FaGithubSquare } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
+import { FaTwitterSquare } from "react-icons/fa";
 
 export default function Intro() {
   return (
@@ -54,36 +56,61 @@ export default function Intro() {
         className="text-1xl font-medium mt-5 font-sans tracking-tight">
         SAMP TEXT: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
         incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-        in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
-        sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-        laborum.
+        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
       </motion.p>
-      <motion.div
-        initial={{ y: -100, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{
-          type: "spring",
-          delay: 0.2,
-          duration: 0.7
-        }}
+      <div
         className="grid grid-flow-col
       place-items-center gap-1
-      w-max mx-auto my-5">
-        <a href="https://github.com/JustMakingUpWords" target="_blank">
-          <FaGithub
-            className="size-9 
-          hover:outline hover:mx-1 outline-3 outline-offset-2 rounded-full 
-          duration-100 "></FaGithub>
-        </a>
+      w-max mx-auto my-5
+      scale-110">
+        <motion.div
+          initial={{ y: -100, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{
+            type: "spring",
+            delay: 0.2,
+            duration: 0.7
+          }}>
+          <a href="https://github.com/JustMakingUpWords" target="_blank">
+            <FaGithubSquare
+              className="size-9 
+          hover:outline hover:mx-1 outline-3 outline-offset-[0.1rem] rounded-[0.2rem]
+          duration-100 "></FaGithubSquare>
+          </a>
+        </motion.div>
 
-        <a href="https://www.linkedin.com/" target="_blank">
-          <FaLinkedin
-            className="size-9 
+        <motion.div
+          initial={{ y: -100, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{
+            type: "spring",
+            delay: 0.22,
+            duration: 0.7
+          }}>
+          <a href="https://www.linkedin.com/" target="_blank">
+            <FaLinkedin
+              className="size-9 
           hover:outline hover:mx-1 outline-3 outline-offset-[0.1rem] rounded-[0.2rem]
           duration-100 "></FaLinkedin>
-        </a>
-      </motion.div>
+          </a>
+        </motion.div>
+
+        <motion.div
+          initial={{ y: -100, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{
+            type: "spring",
+            delay: 0.24,
+            duration: 0.7
+          }}>
+          <a href="https://twitter.com/home" target="_blank">
+            <FaTwitterSquare
+              className="size-9 
+          hover:outline hover:mx-1 outline-3 outline-offset-[0.1rem] rounded-[0.2rem]
+          duration-100 "></FaTwitterSquare>
+          </a>
+        </motion.div>
+      </div>
     </section>
   );
 }
