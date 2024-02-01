@@ -2,7 +2,9 @@
 
 import { motion } from "framer-motion";
 import React from "react";
+
 import { FaGithub } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
 
 export default function Intro() {
   return (
@@ -75,11 +77,11 @@ export default function Intro() {
           duration-100 "></FaGithub>
         </a>
 
-        <a href="https://github.com/JustMakingUpWords" target="_blank">
-          <FaGithub
+        <a href="https://www.linkedin.com/" target="_blank">
+          <FaLinkedin
             className="size-9 
-          hover:outline hover:mx-1 outline-3 outline-offset-2 rounded-full 
-          duration-100 "></FaGithub>
+          hover:outline hover:mx-1 outline-3 outline-offset-[0.1rem] rounded-[0.2rem]
+          duration-100 "></FaLinkedin>
         </a>
       </motion.div>
     </section>
