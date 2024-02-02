@@ -111,6 +111,22 @@ export default function Intro() {
           duration-100 "></FaTwitterSquare>
           </a>
         </motion.div>
+
+        <motion.div
+          initial={{ y: -100, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{
+            type: "spring",
+            delay: 0.26,
+            duration: 0.7
+          }}>
+          <a href="https://twitter.com/home" target="_blank">
+            <ImMail
+              className="size-8
+          hover:outline hover:mx-1 outline-3 outline-offset-[0.1rem] rounded-[0.2rem]
+          duration-100 "></ImMail>
+          </a>
+        </motion.div>
       </div>
     </section>
   );
