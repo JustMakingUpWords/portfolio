@@ -17,7 +17,7 @@ export default function Intro() {
         animate={{ y: 0, opacity: 1 }}
         transition={{
           type: "spring",
-          duration: 0.5
+          duration: 1
         }}
         className="flex items-center justify-center text-6xl mt-44">
         Hello!
@@ -28,7 +28,7 @@ export default function Intro() {
             type: "spring",
             delay: 0.1,
             damping: 10,
-            duration: 0.5
+            duration: 1
           }}
           className="relative">
           👋
@@ -40,7 +40,7 @@ export default function Intro() {
         transition={{
           type: "spring",
           delay: 0.1,
-          duration: 0.5
+          duration: 1
         }}
         className="flex items-center justify-center text-6xl mt-3 font-mono tracking-tighter">
         I'm&nbsp;
@@ -52,7 +52,7 @@ export default function Intro() {
         transition={{
           type: "spring",
           delay: 0.2,
-          duration: 0.5
+          duration: 1
         }}
         className="text-1xl font-medium mt-5 font-sans tracking-tight">
         SAMP TEXT: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
