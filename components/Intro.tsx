@@ -125,9 +125,9 @@ export default function Intro() {
           <ImMail // stand in for mail icon
             className="size-[1.92rem] rounded-[0.2rem]"></ImMail>
           <div // actual mail thing (i did this so the bar scales to the right and doesnt affect anything else)
-            className="absolute
+            className="absolute group
           -translate-y-[1.95rem] translate-x-[0.01rem]
-          group block size-[1.96rem]
+          block size-[1.96rem]
         bg-slate-100 rounded-[0.2rem] bg-opacity-0
         text-black text-opacity-0 font-sans tracking-tight font-semibold
           group-hover:outline outline-white outline-offset-[0.2rem]
@@ -145,11 +145,3 @@ export default function Intro() {
     </section>
   );
 }
-/*
-<a href="https://twitter.com/home" target="_blank">
-    <ImMail
-      className="size-8 z-50
-hover:outline hover:mx-1 outline-3 outline-offset-[0.1rem] rounded-[0.2rem]
-duration-100"></ImMail>
-</a>
-*/
