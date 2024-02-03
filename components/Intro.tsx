@@ -20,19 +20,20 @@ export default function Intro() {
           duration: 1
         }}
         className="flex items-center justify-center text-6xl mt-44">
-        Hello!
         <motion.div
-          initial={{ scale: 0.7 }}
-          animate={{ scale: 1 }}
-          transition={{
-            type: "spring",
-            delay: 0.1,
-            damping: 10,
-            duration: 1
+          animate={{
+            scale: [1, 1.1, 1]
           }}
-          className="relative">
+          transition={{
+            ease: "easeInOut",
+            duration: 1,
+            repeat: Infinity,
+            delay: 0.5,
+            repeatDelay: 2
+          }}>
           👋
         </motion.div>
+        Hello!
       </motion.div>
       <motion.div
         initial={{ y: -100, opacity: 0 }}
@@ -44,7 +45,7 @@ export default function Intro() {
         }}
         className="flex items-center justify-center text-6xl mt-3 font-mono tracking-tighter">
         I'm&nbsp;
-        <span className="font-semibold font-mono">Duc Vo</span>!
+        <span className="font-semibold font-mono">Duc Vo</span>
       </motion.div>
       <motion.p
         initial={{ y: -100, opacity: 0 }}
