@@ -2,13 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-/*
-initial={{ y: 100, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{
-        duration: 1
-      }}
-*/
+
 export default function SectionDivider() {
   return (
     <motion.div
