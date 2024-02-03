@@ -6,11 +6,12 @@ import { motion } from "framer-motion";
 export default function SectionDivider() {
   return (
     <motion.div
-      initial={{ y: 100, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
       transition={{
-        type: "tween",
-        duration: 1
+        type: "spring",
+        delay: 2,
+        duration: 10
       }}>
       <motion.div
         animate={{
@@ -22,9 +23,19 @@ export default function SectionDivider() {
           repeat: Infinity,
           delay: 1
         }}
-        className="bg-neutral-700 my-32 h-20 w-1
-      rounded-full
-      hidden sm:block"></motion.div>
+        className="hidden sm:block my-[10rem]">
+        <motion.div
+          className="bg-neutral-700 h-20 w-1
+        rounded-full"></motion.div>
+        <motion.div
+          className="bg-neutral-700 h-4 w-1 rounded-full
+        rotate-[40deg] 
+        absolute -translate-y-[1rem] translate-x-[0.35rem]"></motion.div>
+        <motion.div
+          className="bg-neutral-700 h-4 w-1 rounded-full
+        -rotate-[40deg]
+        absolute -translate-y-[1rem] -translate-x-[0.35rem]"></motion.div>
+      </motion.div>
     </motion.div>
   );
 }
