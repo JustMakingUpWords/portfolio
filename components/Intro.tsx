@@ -55,10 +55,11 @@ export default function Intro() {
           delay: 0.2,
           duration: 1
         }}
-        className="text-1xl font-medium mt-5 font-sans tracking-tight">
-        SAMP TEXT: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        className="text-[1.05rem] font-medium mt-5 font-sans tracking-tight">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+        voluptate velit esse cillum dolore eu fugiat nulla.
       </motion.p>
       <div
         className="grid grid-flow-col
