@@ -3,14 +3,19 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-export default function SectionDivider() {
+type SectionDividerProps = {
+  children: number;
+};
+
+export default function SectionDivider({ children }: SectionDividerProps) {
+  let x = children;
   return (
     <motion.div
       initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
+      whileInView={{ opacity: 1 }}
       transition={{
         type: "spring",
-        delay: 2,
+        delay: x,
         duration: 10
       }}>
       <motion.div
