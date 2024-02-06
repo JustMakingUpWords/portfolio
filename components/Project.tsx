@@ -24,7 +24,8 @@ export default function Project({ title, description, tags, imageUrl }: ProjectP
         scale: scaleProgress,
         opacity: opacityProgress
       }}
-      className="group mb-3 sm:mb-8 last:mb-0">
+      id="projects"
+      className="group mb-3 sm:mb-8 last:mb-0 scroll-mt-[17rem]">
       <section
         className="bg-zinc-800 max-w-[42rem] border border-black/5
       overflow-hidden sm:pr-8 relative

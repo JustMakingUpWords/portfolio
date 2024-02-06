@@ -11,7 +11,11 @@ import { ImMail } from "react-icons/im";
 
 export default function Intro() {
   return (
-    <section className="mb-28 max-w-[50rem] text-center sm:mb-0 font-mono">
+    <section
+      id="home"
+      className="mb-28 max-w-[50rem] sm:mb-0
+      text-center font-mono
+      scroll-mt-[10rem]">
       <motion.div
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}

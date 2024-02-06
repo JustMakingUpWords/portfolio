@@ -11,10 +11,12 @@ export default function About() {
       whileInView={{ y: 0, opacity: 1 }}
       transition={{ duration: 1 }}
       viewport={{ once: true }}
+      id="about"
       className="mt-7 max-w-[30rem]
     text-center leading-8
     font-sans tracking-tight text-[1.025rem] font-medium
-    sm:max-w-[45rem]">
+    sm:max-w-[45rem]
+    scroll-m-[23rem]">
       <SectionHeading>About Me</SectionHeading>
       <p className="">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut

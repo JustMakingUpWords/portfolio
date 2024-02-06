@@ -17,7 +17,7 @@ export default function RootLayout({
 }>) {
   // bg-gradient-to-tl from-purple-900 via-blue-900 to-purple-950 animate-gradient
   return (
-    <html lang="en">
+    <html lang="en" className="!scroll-smooth">
       <body
         className={`${inter.className}
         bg-zinc-900
