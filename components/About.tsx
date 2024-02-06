@@ -9,10 +9,11 @@ export default function About() {
     <motion.section
       initial={{ y: 50, opacity: 0 }}
       whileInView={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.7 }}
+      transition={{ duration: 1 }}
       viewport={{ once: true }}
       className="mt-7 max-w-[30rem]
     text-center leading-8
+    font-sans tracking-tight text-[1.025rem] font-medium
     sm:max-w-[45rem]">
       <SectionHeading>About Me</SectionHeading>
       <p className="">

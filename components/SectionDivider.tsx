@@ -13,6 +13,7 @@ export default function SectionDivider({ children }: SectionDividerProps) {
     <motion.div
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
       transition={{
         type: "spring",
         delay: x,
