@@ -1,12 +1,14 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { links } from "@/lib/data";
 import Link from "next/link";
+import clsx from "clsx";
 
 export default function Header() {
-  // bg-gradient-to-r from-purple-800/75 to-purple-700/75
+  const [activeSection, setActiveSection] = useState("Home");
+
   return (
     <header className="z-[999] relative">
       <motion.div
@@ -39,14 +41,28 @@ export default function Header() {
                 type: "spring",
                 duration: 0.6
               }}
-              className="h-3/4
+              className="h-3/4 relative
             flex items-center justify-center">
               <Link
-                className="flex w-full items-center justify-center px-3 py-3 
+                onClick={() => setActiveSection(link.name)}
+                className="flex w-full
+              items-center justify-center
+              px-3 py-3
               hover:scale-[1.2] transition"
                 href={link.hash}>
                 {link.name}
               </Link>
+              {link.name === activeSection && (
+                <motion.span
+                  layoutId="activeSection"
+                  transition={{
+                    type: "spring",
+                    stiffness: 300,
+                    damping: 30
+                  }}
+                  className="bg-zinc-700 rounded-full
+                absolute inset-0 -z-10"></motion.span>
+              )}
             </motion.li>
           ))}
         </ul>
