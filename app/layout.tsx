@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
+import ActiveSectionContext from "@/context/activeSectionContext";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,8 +24,10 @@ export default function RootLayout({
         bg-zinc-900
         text-blue-50 relative h-[5000px]
         pt-28 sm:pt-36`}>
-        <Header></Header>
-        {children}
+        <ActiveSectionContext>
+          <Header></Header>
+          {children}
+        </ActiveSectionContext>
       </body>
     </html>
   );
