@@ -1,7 +1,9 @@
 "use client";
 
+import { useActiveSectionContext } from "@/context/activeSectionContext";
 import { motion } from "framer-motion";
-import React from "react";
+import React, { useEffect } from "react";
+import { useInView } from "react-intersection-observer";
 
 // icons
 import { FaGithubSquare } from "react-icons/fa";
@@ -10,9 +12,21 @@ import { FaTwitterSquare } from "react-icons/fa";
 import { ImMail } from "react-icons/im";
 
 export default function Intro() {
+  const { ref, inView } = useInView({
+    threshold: 0.75
+  });
+  const { setActiveSection, timeOfLastClick } = useActiveSectionContext();
+
+  useEffect(() => {
+    if (inView && Date.now() - timeOfLastClick > 1000) {
+      setActiveSection("Home");
+    }
+  }, [inView, setActiveSection, timeOfLastClick]);
+
   return (
     <section
       id="home"
+      ref={ref}
       className="mb-28 max-w-[50rem] sm:mb-0
       text-center font-mono
       scroll-mt-[10rem]">

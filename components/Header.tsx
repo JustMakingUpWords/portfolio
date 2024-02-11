@@ -8,7 +8,7 @@ import clsx from "clsx";
 import { useActiveSectionContext } from "@/context/activeSectionContext";
 
 export default function Header() {
-  const { activeSection, setActiveSection } = useActiveSectionContext();
+  const { activeSection, setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
 
   return (
     <header className="z-[999] relative">
@@ -45,7 +45,10 @@ export default function Header() {
               className="h-3/4 relative
             flex items-center justify-center">
               <Link
-                onClick={() => setActiveSection(link.name)}
+                onClick={() => {
+                  setActiveSection(link.name);
+                  setTimeOfLastClick(Date.now());
+                }}
                 className="flex w-full
               items-center justify-center
               px-3 py-3
