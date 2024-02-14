@@ -20,11 +20,11 @@ export default function Project({ title, description, tags, imageUrl }: ProjectP
   return (
     <motion.div
       ref={ref}
+      id="projects"
       style={{
         scale: scaleProgress,
         opacity: opacityProgress
       }}
-      id="projects"
       className="group mb-3 sm:mb-8 last:mb-0 scroll-mt-[17rem]">
       <section
         className="bg-zinc-800 max-w-[42rem] border border-black/5
