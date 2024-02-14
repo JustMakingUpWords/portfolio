@@ -22,7 +22,7 @@ export default function RootLayout({
       <body
         className={`${inter.className}
         bg-zinc-900
-        text-blue-50 relative h-[5000px]
+        text-blue-50 relative
         pt-28 sm:pt-36`}>
         <ActiveSectionContext>
           <Header></Header>
