@@ -8,7 +8,6 @@ type SectionDividerProps = {
 };
 
 export default function SectionDivider({ children }: SectionDividerProps) {
-  let x = children;
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -16,7 +15,7 @@ export default function SectionDivider({ children }: SectionDividerProps) {
       viewport={{ once: true }}
       transition={{
         type: "spring",
-        delay: x,
+        delay: children,
         duration: 10
       }}>
       <motion.div

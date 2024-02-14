@@ -1,6 +1,6 @@
 "use client";
 
-import SectionHeading from "@/components/SectionHeading";
+import SectionHeading from "@/components/reuse/SectionHeading";
 import { projectsData } from "@/lib/data";
 import React from "react";
 import Project from "@/components/Project";

@@ -1,6 +1,6 @@
 "use client";
 
-import SectionHeading from "@/components/SectionHeading";
+import SectionHeading from "@/components/reuse/SectionHeading";
 import React from "react";
 import { motion } from "framer-motion";
 import { useSectionInView } from "@/lib/hooks";
@@ -11,11 +11,11 @@ export default function About() {
   return (
     <motion.section
       ref={ref}
+      id="about"
       initial={{ y: 50, opacity: 0 }}
       whileInView={{ y: 0, opacity: 1 }}
       transition={{ duration: 1 }}
       viewport={{ once: true }}
-      id="about"
       className="mt-7 max-w-[30rem]
     text-center leading-8
     font-sans tracking-tight text-[1.025rem] font-medium
