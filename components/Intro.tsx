@@ -18,8 +18,8 @@ export default function Intro() {
       ref={ref}
       id="home"
       className="mb-28 max-w-[50rem] sm:mb-0
-      text-center font-mono
-      scroll-mt-[10rem]">
+    text-center font-mono
+    scroll-mt-[10rem]">
       <motion.div
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}

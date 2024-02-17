@@ -20,7 +20,7 @@ export default function Home() {
       <Experience></Experience>
       <SectionDivider>{0.5}</SectionDivider>
       <Contact></Contact>
-      <SectionDivider>{0.5}</SectionDivider>
+      <div className="mb-[15rem]"></div>
     </main>
   );
 }
