@@ -23,7 +23,3 @@ https://www.andrealves.dev/blog/how-to-make-an-animated-gradient-text-with-tailw
     background-position: 0% 50%;
   }
 }
-
-.borderBlack {
-  @apply border border-gray-400/10;
-}
