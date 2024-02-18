@@ -1,9 +1,9 @@
 "use client";
 
-import SectionHeading from "@/components/reuse/SectionHeading";
+import SectionHeading from "@/components/_reusable_components/SectionHeading";
 import { projectsData } from "@/lib/data";
 import React from "react";
-import Project from "@/components/Project";
+import Project from "@/components/Project_C/Project";
 import { useSectionInView } from "@/lib/hooks";
 
 export default function Projects() {

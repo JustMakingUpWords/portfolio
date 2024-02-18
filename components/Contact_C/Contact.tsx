@@ -1,10 +1,11 @@
 "use client";
 
-import SectionHeading from "@/components/reuse/SectionHeading";
+import SectionHeading from "@/components/_reusable_components/SectionHeading";
 import { useSectionInView } from "@/lib/hooks";
 import { motion } from "framer-motion";
 import React from "react";
 import { FaPaperPlane } from "react-icons/fa";
+import { sendEmail } from "@/actions/sendEmail";
 
 export default function Contact() {
   const { ref } = useSectionInView("Contact", 0.75);
@@ -28,14 +29,28 @@ export default function Contact() {
         &nbsp;or through this form.
       </p>
 
-      <form className="mt-10 flex flex-col">
+      <form
+        action={async (formData) => {
+          console.log("Running on client");
+          console.log(formData.get("senderEmail"));
+          console.log(formData.get("message"));
+
+          await sendEmail(formData);
+        }}
+        className="mt-10 flex flex-col">
         <input
           type="email"
+          name="senderEmail"
           placeholder="Your email"
+          required={true}
+          maxLength={100}
           className="h-14 px-4 bg-zinc-800
         rounded-lg border border-gray-400/10"></input>
         <textarea
+          name="message"
           placeholder="Your message"
+          required={true}
+          maxLength={5000}
           className="h-52 my-3 p-4 
         border border-gray-400/10 rounded-lg
         bg-zinc-800"></textarea>

@@ -1,6 +1,6 @@
 "use client";
 
-import SectionHeading from "@/components/reuse/SectionHeading";
+import SectionHeading from "@/components/_reusable_components/SectionHeading";
 import { skillsData } from "@/lib/data";
 import { useSectionInView } from "@/lib/hooks";
 import { motion } from "framer-motion";
