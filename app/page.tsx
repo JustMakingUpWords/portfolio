@@ -1,10 +1,10 @@
-import About from "@/components/About";
-import Contact from "@/components/Contact";
-import Experience from "@/components/Experience";
-import Intro from "@/components/Intro";
-import Projects from "@/components/Projects";
-import Skills from "@/components/Skills";
-import SectionDivider from "@/components/reuse/SectionDivider";
+import About from "@/components/About_C/About";
+import Contact from "@/components/Contact_C/Contact";
+import Experience from "@/components/Experience_C/Experience";
+import Intro from "@/components/Intro_C/Intro";
+import Projects from "@/components/Project_C/Projects";
+import Skills from "@/components/Skills_C/Skills";
+import SectionDivider from "@/components/_reusable_components/SectionDivider";
 
 export default function Home() {
   return (
@@ -20,7 +20,7 @@ export default function Home() {
       <Experience></Experience>
       <SectionDivider>{0.5}</SectionDivider>
       <Contact></Contact>
-      <div className="mb-[15rem]"></div>
+      <span className="mb-[15rem]"></span>
     </main>
   );
 }
