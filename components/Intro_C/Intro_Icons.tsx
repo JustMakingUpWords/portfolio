@@ -7,6 +7,10 @@ import { FaGithubSquare, FaLinkedin, FaTwitterSquare, FaRegCopy } from "react-ic
 import { ImMail } from "react-icons/im";
 import Tooltip from "@/components/_reusable_components/Tooltip";
 
+const tFunc = () => {
+  console.log("HI");
+};
+
 export default function Intro_Icons() {
   return (
     <span // icons
@@ -87,12 +91,11 @@ export default function Intro_Icons() {
               onClick={() => {
                 navigator.clipboard.writeText("duc.vo.hm@gmail.com");
               }}
+              id="change"
               className="absolute block rounded-sm
             -translate-y-[1.2rem] translate-x-[10.1rem]
-            scale-[1.05]">
-              <Tooltip text={"COPY"}>
-                <FaRegCopy></FaRegCopy>
-              </Tooltip>
+            scale-[1.05] active:scale-[0.93]">
+              <FaRegCopy></FaRegCopy>
             </button>
           </span>
         </div>
