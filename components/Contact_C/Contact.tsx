@@ -4,13 +4,11 @@ import SectionHeading from "@/components/.reusable_components/SectionHeading";
 import { useSectionInView } from "@/lib/hooks";
 import { motion } from "framer-motion";
 import React from "react";
-import { FaPaperPlane } from "react-icons/fa";
 import { sendEmail } from "@/actions/sendEmail";
-import { useFormStatus } from "react-dom";
+import Submit_Button from "@/components/Contact_C/Submit_Button";
 
 export default function Contact() {
   const { ref } = useSectionInView("Contact", 0.75);
-  const { pending } = useFormStatus();
 
   return (
     <motion.section
@@ -56,17 +54,7 @@ export default function Contact() {
           className="h-52 my-3 p-4 
         border border-gray-400/10 rounded-lg
         bg-zinc-800"></textarea>
-        <button
-          type="submit"
-          className=" group flex items-center justify-center 
-        h-[2.5rem] w-[6rem] rounded-full
-        bg-zinc-800 text-zinc-300
-        outline-none transition-all
-        hover:scale-105
-        hover:bg-zinc-700">
-          Submit&nbsp;
-          <FaPaperPlane className="text-xs opacity-70 transition-all"></FaPaperPlane>
-        </button>
+        <Submit_Button></Submit_Button>
       </form>
     </motion.section>
   );
