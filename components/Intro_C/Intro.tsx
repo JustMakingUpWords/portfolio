@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 import { useSectionInView } from "@/lib/hooks";
 import Intro_Icons from "@/components/Intro_C/Intro_Icons";
-import Tooltip from "@/components/_reusable_components/Tooltip";
+import Tooltip from "@/components/.reusable_components/Tooltip";
 
 export default function Intro() {
   const { ref } = useSectionInView("Home", 0.5);

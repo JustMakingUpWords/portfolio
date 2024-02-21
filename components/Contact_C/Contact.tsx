@@ -1,14 +1,16 @@
 "use client";
 
-import SectionHeading from "@/components/_reusable_components/SectionHeading";
+import SectionHeading from "@/components/.reusable_components/SectionHeading";
 import { useSectionInView } from "@/lib/hooks";
 import { motion } from "framer-motion";
 import React from "react";
 import { FaPaperPlane } from "react-icons/fa";
 import { sendEmail } from "@/actions/sendEmail";
+import { useFormStatus } from "react-dom";
 
 export default function Contact() {
   const { ref } = useSectionInView("Contact", 0.75);
+  const { pending } = useFormStatus();
 
   return (
     <motion.section

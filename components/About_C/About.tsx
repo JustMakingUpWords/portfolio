@@ -1,6 +1,6 @@
 "use client";
 
-import SectionHeading from "@/components/_reusable_components/SectionHeading";
+import SectionHeading from "@/components/.reusable_components/SectionHeading";
 import React from "react";
 import { motion } from "framer-motion";
 import { useSectionInView } from "@/lib/hooks";

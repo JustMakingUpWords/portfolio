@@ -4,7 +4,7 @@ import Experience from "@/components/Experience_C/Experience";
 import Intro from "@/components/Intro_C/Intro";
 import Projects from "@/components/Project_C/Projects";
 import Skills from "@/components/Skills_C/Skills";
-import SectionDivider from "@/components/_reusable_components/SectionDivider";
+import SectionDivider from "@/components/.reusable_components/SectionDivider";
 
 export default function Home() {
   return (
