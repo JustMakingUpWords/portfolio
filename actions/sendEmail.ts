@@ -28,10 +28,11 @@ export const sendEmail = async (formData: FormData) => {
     };
   }
 
+  let data;
   try {
     console.log("SENDING");
-    await resend.emails.send({
-      from: "Contact Form <onboarding@resend.dev>",
+    data = await resend.emails.send({
+      from: "Contact Form <onboarding@resend.cev>",
       to: "duc.vo.hm@gmail.com",
       subject: "Message from contact form",
       reply_to: senderEmail as string,
@@ -40,11 +41,17 @@ export const sendEmail = async (formData: FormData) => {
         senderEmail: senderEmail as string
       })
     });
+    if ("error" in data && data.error !== null) {
+      console.log(data);
+      throw data.error;
+    }
   } catch (error: unknown) {
-    console.log("ERROR: " + error);
-
     return {
       error: getErrorMessage(error)
     };
   }
+
+  return {
+    data
+  };
 };
