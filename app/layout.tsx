@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/Header_C/Header";
 import ActiveSectionContext from "@/context/activeSectionContext";
 import { Toaster } from "react-hot-toast";
+import Theme_Switch_Button from "@/components/Buttons_C/Theme_Switch_Button";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,7 +18,6 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  // bg-gradient-to-tl from-purple-900 via-blue-900 to-purple-950 animate-gradient
   return (
     <html lang="en" className="!scroll-smooth">
       <body
@@ -27,6 +27,7 @@ export default function RootLayout({
         pt-28 sm:pt-36`}>
         <ActiveSectionContext>
           <Header></Header>
+          <Theme_Switch_Button></Theme_Switch_Button>
           <Toaster position="top-right" reverseOrder={false}></Toaster>
           {children}
         </ActiveSectionContext>
