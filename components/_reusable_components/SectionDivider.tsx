@@ -28,7 +28,7 @@ export default function SectionDivider({ children }: SectionDividerProps) {
           repeat: Infinity,
           delay: 1
         }}
-        className="hidden sm:block my-[10rem] mt-[10.5rem]">
+        className="block my-[10rem] mt-[10.5rem]">
         <motion.div
           className="bg-neutral-700 h-20 w-1
         rounded-full"></motion.div>
