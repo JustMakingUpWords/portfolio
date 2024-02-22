@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 import { FaGithubSquare, FaLinkedin, FaTwitterSquare, FaRegCopy } from "react-icons/fa";
 import { ImMail } from "react-icons/im";
-import Tooltip from "@/components/.reusable_components/Tooltip";
+import Tooltip from "@/components/_reusable_components/Tooltip";
 
 const tFunc = () => {
   console.log("HI");
