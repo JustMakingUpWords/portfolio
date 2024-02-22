@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { FaGithubSquare, FaLinkedin, FaTwitterSquare, FaRegCopy } from "react-icons/fa";
 import { ImMail } from "react-icons/im";
 import Tooltip from "@/components/_reusable_components/Tooltip";
+import toast from "react-hot-toast";
 
 const tFunc = () => {
   console.log("HI");
@@ -96,6 +97,13 @@ export default function Intro_Icons() {
             <button
               onClick={() => {
                 navigator.clipboard.writeText("duc.vo.hm@gmail.com");
+                toast.success("Copied", {
+                  style: {
+                    borderRadius: "10px",
+                    background: "#333",
+                    color: "#fff"
+                  }
+                });
               }}
               id="change"
               className="absolute block rounded-sm

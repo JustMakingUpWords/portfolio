@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import React from "react";
 import { sendEmail } from "@/actions/sendEmail";
 import Submit_Button from "@/components/Contact_C/Submit_Button";
+import toast from "react-hot-toast";
 
 export default function Contact() {
   const { ref } = useSectionInView("Contact", 0.75);
@@ -35,7 +36,19 @@ export default function Contact() {
           console.log(formData.get("senderEmail"));
           console.log(formData.get("message"));
 
-          await sendEmail(formData);
+          const { data, error } = await sendEmail(formData);
+
+          if (error) {
+            toast.error("ERROR\ndev: " + error, {
+              style: {
+                borderRadius: "10px",
+                background: "#333",
+                color: "#fff"
+              }
+            });
+            return;
+          }
+          toast.success("Sent successfully");
         }}
         className="mt-10 flex flex-col">
         <input
