@@ -11,19 +11,29 @@ export default function Theme_Switch_Button() {
   const toggleTheme = () => {
     if (theme === "light") {
       setTheme("dark");
-      window.localStorage.setItem("theme", "dark");
+      //window.localStorage.setItem("theme", "dark");
+      document.documentElement.classList.add("dark");
     } else {
       setTheme("light");
-      window.localStorage.setItem("theme", "light");
+      //window.localStorage.setItem("theme", "light");
+      document.documentElement.classList.remove("dark");
     }
   };
 
+  /*
   useEffect(() => {
     const localTheme = window.localStorage.getItem("theme") as Theme | null;
     if (localTheme) {
       setTheme(localTheme);
+      if (localTheme === "light") {
+        document.documentElement.classList.remove("dark");
+      }
+    } else if (window.matchMedia("(prefers-color-scheme: light)").matches) {
+      setTheme("light");
+      document.documentElement.classList.remove("dark");
     }
   }, []);
+  */
 
   return (
     <button

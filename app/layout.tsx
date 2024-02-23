@@ -19,10 +19,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="!scroll-smooth">
+    <html lang="en" className="!scroll-smooth dark">
       <body
         className={`${inter.className}
-        bg-zinc-900
+        bg-zinc-100 dark:bg-zinc-900
         text-blue-50 relative
         pt-28 sm:pt-36`}>
         <ActiveSectionContext>
