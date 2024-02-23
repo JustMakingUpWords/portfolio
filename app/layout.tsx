@@ -5,7 +5,6 @@ import Header from "@/components/Header_C/Header";
 import ActiveSectionContext from "@/context/activeSectionContext";
 import { Toaster } from "react-hot-toast";
 import Theme_Switch_Button from "@/components/Buttons_C/Theme_Switch_Button";
-
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -26,7 +25,6 @@ export default function RootLayout({
         text-blue-50 relative
         pt-28 sm:pt-36`}>
         <ActiveSectionContext>
-          <Header></Header>
           <Theme_Switch_Button></Theme_Switch_Button>
           <Toaster position="top-right" reverseOrder={false}></Toaster>
           {children}
