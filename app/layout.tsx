@@ -21,9 +21,8 @@ export default function RootLayout({
     <html lang="en" className="!scroll-smooth dark">
       <body
         className={`${inter.className}
-        bg-zinc-100 dark:bg-zinc-900
-        text-blue-50 relative
-        pt-28 sm:pt-36`}>
+        bg-zinc-100 dark:bg-zinc-800
+        text-blue-50 relative`}>
         <ActiveSectionContext>
           <Theme_Switch_Button></Theme_Switch_Button>
           <Toaster position="top-right" reverseOrder={false}></Toaster>
