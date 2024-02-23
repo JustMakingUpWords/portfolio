@@ -8,11 +8,9 @@ import { ImMail } from "react-icons/im";
 import Tooltip from "@/components/_reusable_components/Tooltip";
 import toast from "react-hot-toast";
 
-const tFunc = () => {
-  console.log("HI");
-};
-
 export default function Intro_Icons() {
+  let delayTime = 0.4;
+
   return (
     <span // icons
       className="grid grid-flow-col
@@ -21,12 +19,12 @@ export default function Intro_Icons() {
     scale-110">
       <Tooltip text={"Github"} transX={"-23%"}>
         <motion.div
-          initial={{ y: -100, opacity: 0 }}
+          initial={{ y: 100, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{
             type: "spring",
-            delay: 0.2,
-            duration: 0.7
+            delay: 0.2 + delayTime,
+            duration: 1.3
           }}>
           <a href="https://github.com/JustMakingUpWords" target="_blank">
             <FaGithubSquare
@@ -38,12 +36,12 @@ export default function Intro_Icons() {
       </Tooltip>
       <Tooltip text={"LinkedIn"} transX={"-29%"}>
         <motion.div
-          initial={{ y: -100, opacity: 0 }}
+          initial={{ y: 100, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{
             type: "spring",
-            delay: 0.22,
-            duration: 0.7
+            delay: 0.22 + delayTime,
+            duration: 1.3
           }}>
           <a href="https://www.linkedin.com/" target="_blank">
             <FaLinkedin
@@ -55,12 +53,12 @@ export default function Intro_Icons() {
       </Tooltip>
       <Tooltip text={"Twitter"} transX={"-25%"}>
         <motion.div
-          initial={{ y: -100, opacity: 0 }}
+          initial={{ y: 100, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{
             type: "spring",
-            delay: 0.24,
-            duration: 0.7
+            delay: 0.24 + delayTime,
+            duration: 1.3
           }}>
           <a href="https://twitter.com/home" target="_blank">
             <FaTwitterSquare
@@ -71,12 +69,12 @@ export default function Intro_Icons() {
         </motion.div>
       </Tooltip>
       <motion.div // email
-        initial={{ y: -100, opacity: 0 }}
+        initial={{ y: 100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{
           type: "spring",
-          delay: 0.26,
-          duration: 0.7
+          delay: 0.26 + delayTime,
+          duration: 1.3
         }}
         className="group">
         <ImMail className="size-[1.92rem] rounded-[0.2rem]"></ImMail>
