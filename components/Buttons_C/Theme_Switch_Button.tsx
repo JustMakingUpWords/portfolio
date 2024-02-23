@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import { BsSun, BsMoon } from "react-icons/bs";
+import { motion } from "framer-motion";
 
 type Theme = "light" | "dark" | "system";
 
@@ -11,42 +12,35 @@ export default function Theme_Switch_Button() {
   const toggleTheme = () => {
     if (theme === "light") {
       setTheme("dark");
-      //window.localStorage.setItem("theme", "dark");
       document.documentElement.classList.add("dark");
     } else {
       setTheme("light");
-      //window.localStorage.setItem("theme", "light");
       document.documentElement.classList.remove("dark");
     }
   };
 
-  /*
-  useEffect(() => {
-    const localTheme = window.localStorage.getItem("theme") as Theme | null;
-    if (localTheme) {
-      setTheme(localTheme);
-      if (localTheme === "light") {
-        document.documentElement.classList.remove("dark");
-      }
-    } else if (window.matchMedia("(prefers-color-scheme: light)").matches) {
-      setTheme("light");
-      document.documentElement.classList.remove("dark");
-    }
-  }, []);
-  */
-
   return (
-    <button
-      onClick={toggleTheme}
-      className="flex items-center justify-center
-    fixed top-8 right-8 rounded-full
-    scale-[1.8] w-[1.7rem] h-[1.7rem]
+    <motion.section
+      initial={{ y: -100 }}
+      animate={{ y: 0 }}
+      transition={{
+        type: "spring",
+        duration: 0.7
+      }}
+      className="flex
+    items-center justify-center
+    fixed w-[3.1rem] h-[3.1rem]
+    rounded-full top-7 left-7
     bg-neutral-800 bg-opacity-70 backdrop-blur-[0.5rem]
     border border-neutral-900 border-opacity-40
-    shadow-xl shadow-black/[0.4]
-    hover:scale-[1.9] active:scale-[1.7]
-    transition-all">
-      {theme === "light" ? <BsSun></BsSun> : <BsMoon className="scale-[0.85]"></BsMoon>}
-    </button>
+    shadow-xl shadow-black/[0.4]">
+      <button
+        onClick={toggleTheme}
+        className="scale-[1.8]
+      hover:scale-[2] active:scale-[1.7]
+      transition-all">
+        {theme === "light" ? <BsSun></BsSun> : <BsMoon className="scale-[0.85]"></BsMoon>}
+      </button>
+    </motion.section>
   );
 }
