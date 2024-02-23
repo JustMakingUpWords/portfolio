@@ -5,7 +5,6 @@ import { motion } from "framer-motion";
 
 import { useSectionInView } from "@/lib/hooks";
 import Intro_Icons from "@/components/Intro_C/Intro_Icons";
-import Tooltip from "@/components/_reusable_components/Tooltip";
 
 export default function Intro() {
   const { ref } = useSectionInView("Home", 0.5);
@@ -52,7 +51,21 @@ export default function Intro() {
         I'm&nbsp;
         <span className="font-semibold font-mono">Duc Vo</span>
       </motion.div>
-      <motion.p
+
+      <motion.div
+        initial={{ scaleX: 0 }}
+        animate={{ scaleX: 1 }}
+        transition={{
+          type: "spring",
+          delay: 0.35,
+          duration: 0.8
+        }}
+        className="mx-auto block
+      w-50 h-[0.15rem] rounded-full
+      bg-white
+      mt-5 -mb-2"></motion.div>
+
+      <motion.p // hidden
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{
@@ -60,7 +73,7 @@ export default function Intro() {
           delay: 0.2,
           duration: 1
         }}
-        className="text-[1.05rem] font-medium mt-5 font-sans tracking-tight">
+        className="hidden text-[1.05rem] font-medium mt-5 font-sans tracking-tight">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
         labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
         laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
