@@ -22,7 +22,8 @@ export default function RootLayout({
       <body
         className={`${inter.className}
         bg-zinc-100 dark:bg-zinc-800
-        text-blue-50 relative`}>
+        text-slate-950 dark:text-blue-50
+        relative`}>
         <ActiveSectionContext>
           <Theme_Switch_Button></Theme_Switch_Button>
           <Toaster position="top-right" reverseOrder={false}></Toaster>
