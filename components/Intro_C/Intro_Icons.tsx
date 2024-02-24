@@ -68,50 +68,34 @@ export default function Intro_Icons() {
           </a>
         </motion.div>
       </Tooltip>
-      <motion.div // email
-        initial={{ y: 100, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{
-          type: "spring",
-          delay: 0.26 + delayTime,
-          duration: 1.3
-        }}
-        className="group">
-        <ImMail className="size-[1.92rem] rounded-[0.2rem]"></ImMail>
-        <div
-          className="absolute group
-        -translate-y-[1.95rem] translate-x-[0.01rem]
-        block size-[1.96rem]
-      bg-slate-100 rounded-[0.2rem] bg-opacity-0
-      text-black text-opacity-0 font-sans tracking-tight font-semibold
-        group-hover:outline outline-white outline-offset-[0.2rem]
-        group-hover:w-[11.7rem] group-hover:text-opacity-100 group-hover:bg-opacity-100
-        duration-200">
-          <span // words
-            className="absolute
-          translate-y-[0.19rem] translate-x-[0.3rem]
-          hidden group-hover:block">
-            duc.vo.hm@gmail.com
-            <button
-              onClick={() => {
-                navigator.clipboard.writeText("duc.vo.hm@gmail.com");
-                toast.success("Copied", {
-                  style: {
-                    borderRadius: "10px",
-                    background: "#333",
-                    color: "#fff"
-                  }
-                });
-              }}
-              id="change"
-              className="absolute block rounded-sm
-            -translate-y-[1.2rem] translate-x-[10.1rem]
-            scale-[1.05] active:scale-[0.93]">
-              <FaRegCopy></FaRegCopy>
-            </button>
-          </span>
-        </div>
-      </motion.div>
+      <Tooltip text={"duc.vo.hm@gmail.com"} transX={"-40%"} transY={-1}>
+        <motion.div
+          initial={{ y: 100, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{
+            type: "spring",
+            delay: 0.26 + delayTime,
+            duration: 1.3
+          }}>
+          <button
+            onClick={() => {
+              navigator.clipboard.writeText("duc.vo.hm@gmail.com");
+              toast.success("Copied", {
+                style: {
+                  borderRadius: "10px",
+                  background: "#333",
+                  color: "#fff"
+                }
+              });
+            }}
+            className="size-[2rem] mr-[0.05rem]
+          translate-y-1 rounded-[0.2rem]
+          hover:outline outline-3 outline-offset-[0.2rem]
+          duration-100">
+            <ImMail className="size-[2rem] rounded-[0.2rem]"></ImMail>
+          </button>
+        </motion.div>
+      </Tooltip>
     </span>
   );
 }
