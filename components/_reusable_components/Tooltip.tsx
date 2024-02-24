@@ -2,12 +2,13 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 
 type ToolTipProps = {
-  text: String;
-  transX: String;
+  text: string;
+  transX: string;
+  transY?: number;
   children: React.ReactNode;
 };
 
-export default function Tooltip({ text, transX, children }: ToolTipProps) {
+export default function Tooltip({ text, transX, transY = 0, children }: ToolTipProps) {
   const [isVisible, setIsVisible] = useState(false);
 
   return (
@@ -24,13 +25,13 @@ export default function Tooltip({ text, transX, children }: ToolTipProps) {
         <motion.div
           initial={{
             opacity: 0,
-            y: -10,
+            y: -10 + transY,
             x: `${transX}`,
             scale: 0.9
           }}
           animate={{
             opacity: 1,
-            y: 0,
+            y: 0 + transY,
             x: `${transX}`,
             scale: 1
           }}
