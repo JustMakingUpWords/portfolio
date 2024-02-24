@@ -52,7 +52,7 @@ export default function Intro() {
         <span className="font-semibold font-mono">Duc Vo</span>
       </motion.div>
 
-      <motion.div
+      <motion.div // line seperator
         initial={{ scaleX: 0 }}
         animate={{ scaleX: 1 }}
         transition={{
@@ -62,7 +62,7 @@ export default function Intro() {
         }}
         className="mx-auto block
       w-50 h-[0.15rem] rounded-full
-      bg-white
+      bg-black dark:bg-white
       mt-5 -mb-2"></motion.div>
 
       <motion.p // hidden

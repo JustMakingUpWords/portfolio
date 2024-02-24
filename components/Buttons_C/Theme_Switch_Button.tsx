@@ -31,8 +31,8 @@ export default function Theme_Switch_Button() {
     items-center justify-center
     fixed w-[3.1rem] h-[3.1rem]
     rounded-full top-7 left-7
-    bg-neutral-800 bg-opacity-70 backdrop-blur-[0.5rem]
-    border border-neutral-900 border-opacity-40
+    bg-neutral-100 dark:bg-neutral-800
+    bg-opacity-70 backdrop-blur-[0.5rem]
     shadow-xl shadow-black/[0.4]">
       <button
         onClick={toggleTheme}
