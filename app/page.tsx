@@ -16,9 +16,9 @@ export default function Home() {
       <SectionDivider>{2}</SectionDivider>
       <About></About>
       <SectionDivider>{0.5}</SectionDivider>
-      <Projects></Projects>
-      <SectionDivider>{0.5}</SectionDivider>
       <Skills></Skills>
+      <SectionDivider>{0.5}</SectionDivider>
+      <Projects></Projects>
       <SectionDivider>{0.5}</SectionDivider>
       <Experience></Experience>
       <SectionDivider>{0.5}</SectionDivider>

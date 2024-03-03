@@ -26,7 +26,7 @@ export default function RootLayout({
         relative`}>
         <ActiveSectionContext>
           <Theme_Switch_Button></Theme_Switch_Button>
-          <Toaster position="top-right" reverseOrder={false}></Toaster>
+          <Toaster position="top-center" reverseOrder={false}></Toaster>
           {children}
         </ActiveSectionContext>
       </body>
