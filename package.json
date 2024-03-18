@@ -1,7 +1,6 @@
 {
   "name": "react-portfolio",
   "version": "0.1.0",
-  "homepage": "https://JustMakingUpWords.github.io/portfolio",
   "private": true,
   "scripts": {
     "dev": "next dev",
